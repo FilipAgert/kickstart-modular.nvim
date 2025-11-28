@@ -211,7 +211,16 @@ return {
         clangd = {},
         -- gopls = {},
         pyright = {},
-        fortls = {},
+        fortls = {
+          cmd = {
+            'fortls',
+            '--lowercase_intrinsics',
+            '--hover_signature',
+            '--hover_language=fortran',
+            '--use_signature_help',
+            '--notify_init',
+          },
+        },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
