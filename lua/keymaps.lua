@@ -1,5 +1,7 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+-- Remap 'jk' to <Esc> in Insert Mode ('i')
+vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit Insert Mode' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
