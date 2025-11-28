@@ -7,6 +7,13 @@ vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit Insert Mode' })
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- <Leader>O: Insert a new line above the current one (like 'O')
+-- but leaves the clipboard/register unchanged.
+vim.keymap.set('n', '<Leader>O', 'O<Esc>0"_D', { desc = 'Insert line above (no insert mode)' })
+-- <Leader>o: Insert a new line below the current one (like 'o')
+-- but leaves the clipboard/register unchanged.
+vim.keymap.set('n', '<Leader>o', 'o<Esc>0"_D', { desc = 'Insert line below (no insert mode)' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
