@@ -23,6 +23,11 @@ vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
+vim.o.tabstop = 4 -- A tab character counts as 4 spaces for display
+vim.o.shiftwidth = 4 -- Auto-indent commands (like << or >>) move 4 spaces
+vim.o.softtabstop = 4 -- Backspace and Tab key in Insert Mode act like 4 spaces
+vim.o.expandtab = true -- Converts all tab input to spaces (crucial for consistency)
+
 -- Enable break indent
 vim.o.breakindent = true
 
@@ -70,5 +75,3 @@ vim.o.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
-
--- vim: ts=2 sts=2 sw=2 et

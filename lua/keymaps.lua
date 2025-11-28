@@ -13,6 +13,11 @@ vim.keymap.set('n', '<Leader>O', 'O<Esc>0"_D', { desc = 'Insert line above (no i
 -- <Leader>o: Insert a new line below the current one (like 'o')
 -- but leaves the clipboard/register unchanged.
 vim.keymap.set('n', '<Leader>o', 'o<Esc>0"_D', { desc = 'Insert line below (no insert mode)' })
+--
+-- Normal Mode: Shift+Tab (<<) to dedent the current line/selection
+vim.keymap.set('n', '<S-Tab>', '<<', { silent = true, desc = 'Shift line left (dedent)' })
+-- Insert Mode: Shift+Tab (<C-d>) to dedent current line and stay in insert mode
+vim.keymap.set('i', '<S-Tab>', '<C-d>', { silent = true, desc = 'Dedent and stay in Insert Mode' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -69,5 +74,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
-
--- vim: ts=2 sts=2 sw=2 et
