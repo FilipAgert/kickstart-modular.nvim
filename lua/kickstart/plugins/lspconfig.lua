@@ -270,12 +270,13 @@ return {
         'cpptools',
         'black',
         'clang-format',
+        'markdownlint', --Markdown code
         'clangd',
         'findent',
         'fprettify',
         'isort',
-        'stylua',
         'pyright',
+        'stylua',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
       require('mason-lspconfig').setup {
